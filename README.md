@@ -1,5 +1,5 @@
 # MPSNet: A light-weight deep learning-based network specialized for mobile phones to extract palm-vein features from the saturation channel
-by Shi-Jinn Horng, Thi-Van Nguyen, Dinh-Trung Vu, Wanlei Zhou, and Chin-Teng Lin. <strong>The source code of MPSNet will be updated.</strong>
+<strong>The source code of MPSNet will be updated.</strong>
 ## Introduction
 This repository gives the implementation of our proposed palm ROI extraction method based on key vectors and features extraction method based on deep learning.
 ## Databases
