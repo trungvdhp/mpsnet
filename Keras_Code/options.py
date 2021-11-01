@@ -48,7 +48,7 @@ class Options:
         with open(self.opt.data_folder + self.opt.test_folder_file,"r") as f:
             self.opt.test_folders = f.readlines()
 
-        self.opt.output_folder = 'result\\' + 'session_' + str(self.opt.train_session) + '\\' + self.opt.model_name + '\\'
+        self.opt.output_folder = 'results\\' + 'session_' + str(self.opt.train_session) + '\\' + self.opt.model_name + '\\'
         os.makedirs(self.opt.output_folder, exist_ok = True)
         
         return self.opt
