@@ -9,12 +9,11 @@ Links for downloading databases as follows:
 
 1. <strong>Tongji: </strong>[https://cslinzhang.github.io/ContactlessPalm/](https://cslinzhang.github.io/ContactlessPalm/)
 
-2. <strong>PolyU: </strong>[http://www.comp.polyu.edu.hk/~biometrics/MultispectralPalmprint/MSP.htm](http://www.comp.polyu.edu.hk/~biometrics/MultispectralPalmprint/MSP.htm)
+2. <strong>PolyU: </strong> Email to [Prof. Ajay Kumar](mailto:Ajay.Kumar@polyu.edu.hk?Subject=Request%20for%20HK%20Polytechnic%20University%20MultiSpectral%20Palmprint%20Database) to request for HK Polytechnic University MultiSpectral Palmprint Database.
 
-3. <strong>CASIA: </strong>[http://biometrics.idealtest.org/dbDetailForUser.do?id=6](http://biometrics.idealtest.org/dbDetailForUser.do?id=6)
+3. <strong>CASIA: </strong>[http://www.cbsr.ia.ac.cn/english/MS_PalmprintDatabases.asp](http://www.cbsr.ia.ac.cn/english/MS_PalmprintDatabases.asp)
 
-4. <strong>XJTU-UP: </strong>[http://gr.xjtu.edu.cn/web/
-bell/resource](http://gr.xjtu.edu.cn/web/bell/resource)
+4. <strong>XJTU-UP: </strong> Email to [Prof. Dexing Zhong](mailto:bell@xjtu.edu.cn?Subject=Request%20for%20Xian%20Jiaotong%20University%20Unconstrained%20Palmprint%20(XJTU-UP)%20Database) to request for Xian Jiaotong University Unconstrained Palmprint (XJTU-UP) Database.
 
 5. <strong>Our databases: </strong>
 NTUST Contactless RGB Palm Database contains 2,180 RGB images from 109 people captured by HTC One A9 (named NTUST-HP) and 5,760 RGB images from 144 people by iPhone 8+ (named as NTUST-IP) in an unconstrained manner with the flashlight. The total number of individuals in our database is 253. The images in our database were collected from volunteers from China, Taiwan, Vietnam, Thailand, Indonesia, and Mongolia aged 18 to 63 years old with various backgrounds, rotations, scales, and different illuminations. NTUST-HP database is captured in one session, 10 samples indoor for each palm. NTUST-IP is captured in two sessions, 10 samples for each palm indoor and 10 samples for each palm outdoor. The time interval between two sessions is about one week.
