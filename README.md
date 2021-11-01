@@ -25,14 +25,14 @@ NTUST Contactless RGB Palm Database contains 2,180 RGB images from 109 people ca
 
     <table>
         <tr>
-            <td><img src="./images/ntust_hp_s4.png" alt="1" width = auto height = auto></td>
-            <td><img src="./images/ntust_ip_s4.png" alt="2" width = auto height = auto></td>
-            <td><img src="./images/ntust_ip_s1.png" alt="3" width = auto height = auto></td>
+            <td><img src="https://github.com/trungvdhp/mpsnet/blob/main/Images/ntust_hp_s4.png" alt="1" width = auto height = auto></td>
+            <td><img src="https://github.com/trungvdhp/mpsnet/blob/main/Images/ntust_ip_s4.png" alt="2" width = auto height = auto></td>
+            <td><img src="https://github.com/trungvdhp/mpsnet/blob/main/Images/ntust_ip_s1.png" alt="3" width = auto height = auto></td>
         </tr>
         <tr>
-            <td><img src="./images/ntust_ip_s2.png" alt="1" width = auto height = auto></td>
-            <td><img src="./images/ntust_ip_s3.png" alt="2" width = auto height = auto></td>
-            <td><img src="./images/ntust_ip_s5.png" alt="3" width = auto height = auto></td>
+            <td><img src="https://github.com/trungvdhp/mpsnet/blob/main/Images/ntust_ip_s2.png" alt="4" width = auto height = auto></td>
+            <td><img src="https://github.com/trungvdhp/mpsnet/blob/main/Images/ntust_ip_s3.png" alt="5" width = auto height = auto></td>
+            <td><img src="https://github.com/trungvdhp/mpsnet/blob/main/Images/ntust_ip_s5.png" alt="6" width = auto height = auto></td>
         </tr>
     </table>
 
@@ -41,11 +41,11 @@ NTUST Contactless RGB Palm Database contains 2,180 RGB images from 109 people ca
 1. <strong>Prepare databases: </strong>
 In ['Keras_Code\data\\'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Code/data/) folder, put palm vein ROI images of each database into the corresponding folder in the following format: 'Database_name\Palm_ID\X.Y', where 'Palm_ID' is the unique identifier of palm, 'X' is image filename, 'Y' is image extension. For example: "NTUST-IP\0001\1_01.tiff", 'database_name' is 'NTUST-IP', 'Palm_ID' is '0001', filename is '1_01', extension is 'tiff'.
 
-    The names of databases for training are listed in the  file ['Keras_Code\data\train_folders.txt'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Code\data\train_folders.txt).
+    The names of databases for training are listed in the  file ['Keras_Code\data\train_folders.txt'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Code/data/train_folders.txt).
 
-    The names of databases with the corresponding number of sessions for testing are listed in the  file ['Keras_Code\data\test_folders.txt'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Code\data\test_folders.txt)
+    The names of databases with the corresponding number of sessions for testing are listed in the  file ['Keras_Code\data\test_folders.txt'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Code/data/test_folders.txt)
 
-    For example, if you want to run 'Open-set' testing (the test set is not included in the train set) on 'NTUST-IP' database (two sessions), then in the file ['train_folders.txt'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Code\data\train_folders.txt) you input the following lines:
+    For example, if you want to run 'Open-set' testing (the test set is not included in the train set) on 'NTUST-IP' database (two sessions), then in the file ['train_folders.txt'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Code/data/train_folders.txt) you input the following lines:
         
         tongji
         polyu
@@ -53,7 +53,7 @@ In ['Keras_Code\data\\'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Cod
         xjtu-up
         ntust-hp
     
-    and in the file ['test_folders.txt'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Code\data\test_folders.txt) you input the line:
+    and in the file ['test_folders.txt'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Code/data/test_folders.txt) you input the line:
 
         ntust-ip 2
     
