@@ -7,7 +7,8 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.utils import shuffle, class_weight
 
 class DataLoader:
-     def __init__(self, config):
+    
+    def __init__(self, config):
         
         self.data_folder = config.data_folder
         self.image_extension = config.image_extension
@@ -16,8 +17,10 @@ class DataLoader:
         curr_class = 0
         label = -1
         i=0
+        print('Load training databases.')
         
         for folder in config.train_folders:
+            folder=folder.strip()
             path = os.path.abspath(self.data_folder + folder)
             pattern = path + '**/*' + config.image_extension
             print(pattern)
@@ -37,6 +40,7 @@ class DataLoader:
                 i+= 1
                 if(i%1000==0):
                     print('Processed: ', i, end='\r')
+        print('Total training images: ', i)
         self.train_data = np.asarray(self.train_data)
         self.train_labels = np.asarray(self.train_labels)
         self.sample_shape = self.train_data.shape[1:]
@@ -46,13 +50,15 @@ class DataLoader:
         
         self.class_weights = class_weight.compute_class_weight('balanced', classes=np.unique(self.train_labels), y=self.train_labels)
         self.class_weights = {l:c for l,c in zip(np.unique(self.train_labels), self.class_weights)}
-    
+        
     def load_test_data(self, test_folder):
         self.test_data = []
         self.test_labels = []
         curr_class = 0
         label = -1
-        i = 0    
+        i = 0  
+        print('Load test databases.')
+        
         for path in pathlib.Path(self.data_folder + test_folder).glob('**/*' + self.image_extension):
             path = os.path.abspath(path)
             img = cv2.imread(path, 0)
@@ -63,10 +69,11 @@ class DataLoader:
                 label += 1
             self.test_data.append(img_to_array(img)/255.0)
             self.test_labels.append(label)
-            
             i+=1
+            
             if(i%100==0):
                 print('Processed: ', i, end='\r')
+        print('Total test images: ', i)
         self.test_data = np.asarray(self.test_data)
         self.test_labels = np.asarray(self.test_labels)
         self.test_name = test_folder

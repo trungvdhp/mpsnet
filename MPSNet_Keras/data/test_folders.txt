@@ -1,6 +1,0 @@
-ntust_hp_test
-ntust_ip_test
-tongji_test
-polyu_test
-casia_test
-xjtu_up_test

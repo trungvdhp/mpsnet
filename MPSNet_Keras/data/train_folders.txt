@@ -1,5 +1,0 @@
-tongji_train 
-polyu_train
-casia_train
-xjtu_up_train 
-ntust_ip_train
