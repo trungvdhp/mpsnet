@@ -8,7 +8,7 @@ This repository gives the implementation of our proposed Palm ROI Extraction met
     We provide NTUST Contactless RGB Palm Database contains 2,180 RGB images from 109 people captured by HTC One A9 (named NTUST-HP) and 5,760 RGB images from 144 people by iPhone 8+ (named as NTUST-IP) in an unconstrained manner with the flashlight. The total number of individuals in our database is 253. The images in our database were collected from volunteers from China, Taiwan, Vietnam, Thailand, Indonesia, and Mongolia aged 18 to 63 years old with various backgrounds, rotations, scales, and different illuminations. NTUST-HP database is captured in one session, 10 samples indoor for each palm. NTUST-IP is captured in two sessions, 10 samples for each palm indoor and 10 samples for each palm outdoor. The time interval between two sessions is about one week.
 2. <strong>Reference samples</strong>
 
-    Researchers can refer to 100 samples of NTUST-HP database (10 classes in ['Images/100_samples/ntust-hp/'](https://github.com/trungvdhp/mpsnet/blob/main/Images/100_samples/ntust-hp) folder) and 100 samples of NTUST-IP database (5 classes in ['Images/100_samples/ntust-ip/'](https://github.com/trungvdhp/mpsnet/blob/main/Images/100_samples/ntust-ip) folder). 
+    Researchers can refer to 100 samples of NTUST-HP database (10 classes in ['Images/200_samples/ntust-hp/'](https://github.com/trungvdhp/mpsnet/blob/main/Images/200_samples/ntust-hp) folder) and 100 samples of NTUST-IP database (5 classes in ['Images/200_samples/ntust-ip/'](https://github.com/trungvdhp/mpsnet/blob/main/Images/200_samples/ntust-ip) folder). 
 
     <strong>* Here are some samples from our databases:</strong>
 
