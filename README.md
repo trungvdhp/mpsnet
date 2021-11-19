@@ -53,7 +53,7 @@ In ['Keras_Code\data\\'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Cod
     where '2' is number of sessions.
 
 2. <strong>Change the settings </strong>
-in the file ['Keras_Code\options.py'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Code/option.py) : the default settings are as used in our paper, you can run different training sessions or models by changing the default values of 'train_session' and 'model_name' options in this file also. You can set the default value of 'train_session' option to be 1 for 'Closed-set' testing (the test set is included in the train set) or 2 for 'Open-set' testing (the test set is not included in the train set). The default value of 'model_name' option is one of the following names:
+in the file ['Keras_Code\options.py'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Code/options.py) : the default settings are as used in our paper, you can run different training sessions or models by changing the default values of 'train_session' and 'model_name' options in this file also. You can set the default value of 'train_session' option to be 1 for 'Closed-set' testing (the test set is included in the train set) or 2 for 'Open-set' testing (the test set is not included in the train set). The default value of 'model_name' option is one of the following names:
     
         mobilenet_v1
         mobilenet_v2
