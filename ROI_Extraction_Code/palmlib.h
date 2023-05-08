@@ -33,7 +33,7 @@ const Scalar whiteColor=Scalar(255,255,255);
 const Scalar blackColor=Scalar(0,0,0);
 
 // Structs
-typedef struct Landmarks{
+typedef struct BoundingBox {
     Point2i topLeft=Point2i(INT_MAX, INT_MAX);
     Point2i topRight=Point2i(INT_MAX, INT_MAX);
     Point2i bottomLeft=Point2i(INT_MAX, INT_MAX);
@@ -81,7 +81,7 @@ typedef struct Landmarks{
         return output4;
     };
 
-} Landmarks;
+} BoundingBox;
 
 typedef struct ConvexHull{
     double area;
