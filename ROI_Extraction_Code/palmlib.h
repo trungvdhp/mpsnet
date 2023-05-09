@@ -32,6 +32,11 @@ const Scalar greenColor=Scalar(0,255,0);
 const Scalar whiteColor=Scalar(255,255,255);
 const Scalar blackColor=Scalar(0,0,0);
 
+inline Point2i scalePoint(const Point2i &p, double scaleFactor){
+    //printf("Point(%d, %d): scaleFactor=%.3f, biasX=%d, //biasY=%d\n",p.x,p.y,scaleFactor,biasX,biasY);
+    return Point2i(int(p.x*scaleFactor),int(p.y*scaleFactor));
+}
+
 // Structs
 typedef struct BoundingBox {
     Point2i topLeft=Point2i(INT_MAX, INT_MAX);
@@ -54,11 +59,24 @@ typedef struct BoundingBox {
         //printf("------------------------------------------------------------\n");
     };
 
+    void scale(double scaleFactor) {
+        topLeft = scalePoint(topLeft, scaleFactor);
+        bottomLeft = scalePoint(bottomLeft, scaleFactor);
+        bottomRight = scalePoint(bottomRight, scaleFactor);
+        topRight = scalePoint(topRight, scaleFactor);
+        int dx = (topRight.x-topLeft.x);
+        int dy = (topRight.y-topLeft.y);
+        edgeSize = int(sqrt(dx*dx+dy*dy));
+    }
+    
     void translate(int biasX, int biasY) {
         topLeft = Point2i(topLeft.x+biasX, topLeft.y+biasY);
         topRight = Point2i(topRight.x+biasX, topRight.y+biasY);
         bottomLeft = Point2i(bottomLeft.x+biasX, bottomLeft.y+biasY);
         bottomRight = Point2i(bottomRight.x+biasX, bottomRight.y+biasY);
+        int dx = (topRight.x-topLeft.x);
+        int dy = (topRight.y-topLeft.y);
+        edgeSize = int(sqrt(dx*dx+dy*dy);
     }
 
     Point2f * inputQuad(){
@@ -204,11 +222,6 @@ inline Point2i sub(const Point2i &p1, const Point2i &p2){
 inline bool outBound(const Point2i &p, int xmin, int xmax, int ymin, int ymax){
     //printf("(%d,%d): X(%d->%d) Y(%d->%d)",p.x,p.y,xmin,xmax,ymin,ymax);
     return p.x<xmin || p.x>xmax || p.y<ymin || p.y>ymax;
-}
-
-inline Point2i scalePoint(const Point2i &p, double scaleFactor){
-    //printf("Point(%d, %d): scaleFactor=%.3f, biasX=%d, //biasY=%d\n",p.x,p.y,scaleFactor,biasX,biasY);
-    return Point2i(int(p.x*scaleFactor),int(p.y*scaleFactor));
 }
 
 inline int distance2Points(const Point2i &p1, const Point2i &p2){
