@@ -525,7 +525,7 @@ vector<ConvexHull> correctHull(const Mat &img, const vector<int> &cvHull, const 
                     max_d=temp[k].dist;
                 }
             }
-            if(temp_size==1 || max_d > t3){
+            if(temp_size==1){
                 move(temp.begin(),temp.begin()+temp_size,back_inserter(newHull));
             }
         }
@@ -573,7 +573,8 @@ ValleyEdge findValleyEdges(const vector<Point2i> &contour, const vector<double> 
     int edge_begin_id = edge_end_id - edge_length;
     int limit_id = hull.begin + edge_length;
     bool valid = false;
-
+    Point2i edge_begin, edge_end;
+    
     while (edge_end_id > limit_id) {
         edge_end_id--;
 
@@ -1261,7 +1262,7 @@ Mat enhanceFeatures(const Mat &src){
 void extractPalmROI(const Mat &rgbImage, Mat &roiImage, int roiSize) {
     
     // Step1. Crop to center square image and resize to 160x160 pixels
-    Mat croppedImage, resizedImage;  
+    Mat croppedImage, resizedImage, binaryImage;  
     bool portrait = rgbImage.cols < rgbImage.rows;
     cv::Rect rect;
 
