@@ -26,11 +26,11 @@ using namespace std;
 
 const double M2PI = 2*M_PI;
 const int binaryMaskSize = 160;
-const int blockSize=27;
-const int constant=11;
-const Scalar greenColor=Scalar(0,255,0);
-const Scalar whiteColor=Scalar(255,255,255);
-const Scalar blackColor=Scalar(0,0,0);
+const int blockSize = 27;
+const int constant = 11;
+const Scalar greenColor = Scalar(0,255,0);
+const Scalar whiteColor = Scalar(255,255,255);
+const Scalar blackColor = Scalar(0,0,0);
 
 inline Point2i scalePoint(const Point2i &p, double scaleFactor){
     //printf("Point(%d, %d): scaleFactor=%.3f, biasX=%d, //biasY=%d\n",p.x,p.y,scaleFactor,biasX,biasY);
@@ -46,12 +46,12 @@ typedef struct BoundingBox {
     int edgeSize=INT_MAX;
 
     void init(Point2i top_left, Point2i top_right, Point2i bottom_left, Point2i bottom_right){
-        topLeft=top_left;
-        topRight=top_right;
-        bottomLeft=bottom_left;
-        bottomRight=bottom_right;
-        int dx=(topRight.x-topLeft.x);
-        int dy=(topRight.y-topLeft.y);
+        topLeft = top_left;
+        topRight = top_right;
+        bottomLeft = bottom_left;
+        bottomRight = bottom_right;
+        int dx = topRight.x-topLeft.x;
+        int dy = topRight.y-topLeft.y;
         edgeSize = int(sqrt(dx*dx+dy*dy));
 
         //("TopLeft(%d, %d), TopRight(%d, %d), edgeSize: %d\n", topLeft.x, topLeft.y,
@@ -64,8 +64,8 @@ typedef struct BoundingBox {
         bottomLeft = scalePoint(bottomLeft, scaleFactor);
         bottomRight = scalePoint(bottomRight, scaleFactor);
         topRight = scalePoint(topRight, scaleFactor);
-        int dx = (topRight.x-topLeft.x);
-        int dy = (topRight.y-topLeft.y);
+        int dx = topRight.x-topLeft.x;
+        int dy = topRight.y-topLeft.y;
         edgeSize = int(sqrt(dx*dx+dy*dy));
     }
     
@@ -74,9 +74,9 @@ typedef struct BoundingBox {
         topRight = Point2i(topRight.x+biasX, topRight.y+biasY);
         bottomLeft = Point2i(bottomLeft.x+biasX, bottomLeft.y+biasY);
         bottomRight = Point2i(bottomRight.x+biasX, bottomRight.y+biasY);
-        int dx = (topRight.x-topLeft.x);
-        int dy = (topRight.y-topLeft.y);
-        edgeSize = int(sqrt(dx*dx+dy*dy);
+        int dx = topRight.x-topLeft.x;
+        int dy = topRight.y-topLeft.y;
+        edgeSize = int(sqrt(dx*dx+dy*dy));
     }
 
     Point2f * inputQuad(){
