@@ -1267,12 +1267,12 @@ void extractPalmROI(const Mat &rgbImage, Mat &roiImage, int roiSize) {
     cv::Rect rect;
 
     if (portrait) {
-        int biasY = (frame.rows - frame.cols) / 2;
-        rect = cv::Rect(0, biasY, frame.cols, frame.cols);
+        int biasY = (rgbImage.rows - rgbImage.cols) / 2;
+        rect = cv::Rect(0, biasY, rgbImage.cols, rgbImage.cols);
     }
     else {
-        int biasX = (frame.cols - frame.rows) / 2;
-        rect = cv::Rect(biasX, 0, frame.rows, frame.rows);
+        int biasX = (rgbImage.cols - rgbImage.rows) / 2;
+        rect = cv::Rect(biasX, 0, rgbImage.rows, rgbImage.rows);
     }
     rgbImage(rect).copyTo(croppedImage);
 
