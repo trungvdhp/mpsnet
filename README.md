@@ -62,3 +62,6 @@ in the file ['Keras_Code\options.py'](https://github.com/trungvdhp/mpsnet/blob/m
         mpsnet
 3. <strong>Train and test model: </strong>
 After preparing databases and settings, you can train and test model by running file ['Keras_Code\train.py'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Code/train.py) or ['Keras_Code\train.ipynb'](https://github.com/trungvdhp/mpsnet/blob/main/Keras_Code/train.ipynb) (Jupyter Notebook file). The results are stored in the folder 'Keras_Code\results\session_X\model_name\\', where 'X' is the training session and 'model_name' is the name of model.
+
+## Cite
+S. -J. Horng, D. -T. Vu, T. -V. Nguyen, W. Zhou and C. -T. Lin, "Recognizing Palm Vein in Smartphones Using RGB Images," in IEEE Transactions on Industrial Informatics, vol. 18, no. 9, pp. 5992-6002, Sept. 2022, doi: 10.1109/TII.2021.3134016.
